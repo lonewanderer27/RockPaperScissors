@@ -8,57 +8,47 @@
     tools:context=".RPCMainActivity">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/win"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:text="Win: 0"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/win"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Win: 0"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/lose"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Lose: 0"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+            <TextView
+                android:id="@+id/lose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lose: 0"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <LinearLayout
-                android:layout_weight="1"
-
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:layout_weight="1">
                 <ImageView
                     android:id="@+id/dispHands"
                     android:layout_width="135dp"
-                    android:layout_height="200dp" />
-            </LinearLayout>
+                    android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                </ImageView>
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
+            android:gravity="bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:baselineAligned="false"
@@ -73,8 +63,7 @@
                     android:id="@+id/rock"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/rock">
-                </ImageView>
+                    android:src="@drawable/rock"></ImageView>
             </LinearLayout>
 
             <LinearLayout
@@ -101,17 +90,19 @@
                     android:src="@drawable/scissor" />
             </LinearLayout>
         </LinearLayout>
+
         <Button
             android:id="@+id/btnPlay"
-            android:text="PLAY"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </Button>
+            android:layout_height="wrap_content"
+            android:text="PLAY"
+            android:textSize="30sp"></Button>
+
         <Button
             android:id="@+id/btnHistory"
-            android:text="VIEW GAME HISTORY"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </Button>
+            android:layout_height="wrap_content"
+            android:text="VIEW GAME HISTORY"
+            android:textSize="25sp"></Button>
     </LinearLayout>
 </ScrollView>
